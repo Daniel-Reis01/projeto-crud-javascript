@@ -1,6 +1,6 @@
-document.querySelector('html').onclick = function() {
-    alert('bem vindo a o  ambiente de estudos javscript');
-}
+// document.querySelector('html').onclick = function() {
+//     alert('bem vindo a o  ambiente de estudos javscript');
+// }
 
 
 let minhaImagem = document.querySelector("img");
@@ -17,3 +17,21 @@ minhaImagem.onclick = function() {
     }
 }
 
+let meuBotao = document.querySelector('button');
+let meuCabecalho = document.querySelector('h1');
+
+function defineNomeUsuario(){
+    let meuNome = prompt('por favor, digite seu nome.');
+    localStorage.setItem('nome', meuNome);
+    meuCabecalho.textContent = 'javascript é legal, ' + meuNome;
+}
+ 
+  if(!localStorage.getItem('nome')){
+    defineNomeUsuario();
+  } else {
+    let nomeGuardado = localStorage.getItem('nome');
+    meuCabecalho.textContent = 'javascript é legal, ' + nomeGuardado;
+  }
+
+  meuBotao.onclick = function(){ defineNomeUsuario();
+ }
