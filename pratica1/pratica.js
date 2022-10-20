@@ -22,8 +22,13 @@ let meuCabecalho = document.querySelector('h1');
 
 function defineNomeUsuario(){
     let meuNome = prompt('por favor, digite seu nome.');
-    localStorage.setItem('nome', meuNome);
-    meuCabecalho.textContent = 'javascript é legal, ' + meuNome;
+    if(!meuNome || meuNome === null){
+        defineNomeUsuario();
+    } else {
+
+        localStorage.setItem('nome', meuNome);
+        meuCabecalho.textContent = 'javascript é legal, ' + meuNome;
+    }
 }
  
   if(!localStorage.getItem('nome')){
