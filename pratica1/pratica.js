@@ -40,3 +40,13 @@ function defineNomeUsuario(){
 
   meuBotao.onclick = function(){ defineNomeUsuario();
  }
+
+ var cats = ['bill', 'jeff', 'pete', 'Biggles', 'Jasmin'];
+ var info ='My cats are called';
+ var para =document.querySelector('p');
+
+ for (var i = 0; i < cats.length; i++){
+   
+    info += cats[i] + ', ';
+ }
+ para.textContent = info;
