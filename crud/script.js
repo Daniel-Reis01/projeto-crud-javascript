@@ -1,4 +1,6 @@
-
+// esse nao é o projeto final 
+//na verdade esse projeto foi quase todo sesenvolvido para uma versao de teste
+//secundaria
 const modal = document.querySelector('.modal-container')
 const tbody = document.querySelector('tbody')
 const sNome = document.querySelector('#m-nome')
